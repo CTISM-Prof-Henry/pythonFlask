@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de exemplo</title>
+	<style>
+		* {
+			font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		}
+	</style>
+</head>
+<body>
+<h1>Exemplo de utilização do método POST</h1>
+<p>Esta página simula o uso de um servidor implementado em Flask.</p>
+<p>Esta página faz uso do protocolo POST do HTTP, e usa AJAX para manipular a resposta do servidor.</p>
+<p>Clique no botão abaixo para ver a resposta do sevidor à requisição enviada por esta página.</p>
+
+<form id="tell_time" name="tell_time" action="http://localhost:5000/tell_time" method="POST">
+	<input type="submit">
+</form>
+<p id="tell_time_result"></p>
+</body>
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>	
+<script>
+$("#tell_time").on("submit", function(event){
+   event.preventDefault(); //this prevents the form to use default submit
+
+	$.ajax({
+		method: "POST",
+		url: $(this).attr("action"), //this will use the form's action attribute
+		data: {tell_time: $("#tell_time").val()},
+		success: function(responseData){
+			document.getElementById('tell_time_result').textContent = JSON.stringify(responseData);
+		}
+	});
+});
+</script>
+</html>

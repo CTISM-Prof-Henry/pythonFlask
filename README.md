@@ -3,7 +3,7 @@
 ## Introdução
 
 Flask é uma biblioteca em Python que implementa um micro-controlador (no sentido do modelo de desenvolvimento de Software 
-[Model-View-Controller](https://pt.wikipedia.org/wiki/MVC)]. Flask **não é** uma das bibliotecas mais populares; ele não
+[Model-View-Controller](https://pt.wikipedia.org/wiki/MVC)). Flask **não é** uma das bibliotecas mais populares; ele não
 é nem mesmo a biblioteca mais popular implementada em Python -- [Django](https://www.djangoproject.com/), por exemplo,
 é bem mais popular.
 
@@ -16,7 +16,7 @@ não é baseada em estados, mas sim em requisições. O servidor não sabe em qu
 para aplicações que são implementadas utilizando o protocolo REST. Um protocolo que leva em consideração o estado do cliente
 é o protocolo [SOAP](https://pt.wikipedia.org/wiki/SOAP).
 
-Você pode ler mais sobre as particularidades destes protocolos nos slides, que são dados na seção se Referências.
+Você pode ler mais sobre as particularidades destes protocolos nos [slides](slides/slides.html) que acompanham este repositório.
 
 ## Importante
 

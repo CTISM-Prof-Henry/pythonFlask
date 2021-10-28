@@ -93,3 +93,4 @@ Existem três formas de acessar o servidor:
 * [Métodos do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
 * [REST API](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
 * [Slides - REST, SOAP, Web API](slides/slides.html)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) (em inglês)

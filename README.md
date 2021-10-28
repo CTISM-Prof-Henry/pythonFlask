@@ -92,4 +92,4 @@ Existem três formas de acessar o servidor:
 * [Métodos do protocolo HTTP - W3Schools](https://www.w3schools.com/tags/ref_httpmethods.asp) (em inglês)
 * [Métodos do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
 * [REST API](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
-* [Slides - REST, SOAP, Web API]()
+* [Slides - REST, SOAP, Web API](slides/slides.html)

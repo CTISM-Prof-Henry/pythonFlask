@@ -52,3 +52,4 @@ pip install --requirement requirements.txt
 * [REST API](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
 * [Slides - REST, SOAP, Web API](slides/slides.html)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/) (em inglês)
+* [AJAX](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX)

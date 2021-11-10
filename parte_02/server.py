@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, jsonify, request, send_file, Response, send_from_directory
+from flask import Flask, request, Response, send_from_directory
 
 
 def main():
@@ -25,12 +25,12 @@ def main():
         # pega o valor do seletor que possui nome 'soundboard_dropdown'
         # quem definiu o nome dessa variável fomos nós mesmos, através da
         # construção da página HTML (view)
-        soundboard_dropdown = request.form['soundboard_dropdown']
-        print('O áudio solicitado foi', soundboard_dropdown)
+        audio_solicitado = request.form['audio_solicitado']
+        print('O áudio solicitado foi', audio_solicitado)
 
         # pega o diretório do script atual
         response = Response(
-            'esta mensagem foi escrita pelo servidor. O áudio solicitado foi %s.mp3' % soundboard_dropdown
+            'esta mensagem foi escrita pelo servidor. O áudio solicitado foi %s.mp3' % audio_solicitado
         )
         # adiciona um cabeçalho à resposta
         response.headers.add('Access-Control-Allow-Origin', '*')
@@ -39,7 +39,6 @@ def main():
 
     # outras coisas interessantes, mas que não serão usadas no trabalho
 
-    # @app.route('/soundboard/<path:filename>')
     @app.route('/soundboard/<path:filename>')
     def uepa(filename):
         # pega o diretório do script atual
@@ -47,7 +46,7 @@ def main():
 
         response = send_from_directory(
             directory=os.path.join(current_script_path, 'audios'),
-            filename=filename,  # 'uepa.mp3'
+            filename=filename,
             as_attachment=True
         )
 

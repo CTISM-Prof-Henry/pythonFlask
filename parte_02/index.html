@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Programa do Ratinho</title>
+	<style>
+		* {
+			font-family: Verdana, "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+		}
+	</style>
+</head>
+<body>
+<h1>Programa do Ratinho</h1>
+<h2>Exemplo de envio de requisição ao servidor</h2>
+<p>Esta página simula o uso de um servidor implementado em Flask.</p>
+<p>Esta página faz uso do protocolo POST do HTTP, e usa AJAX para manipular a resposta do servidor.</p>
+<p>
+    Utilize os diferentes formulários HTML abaixo para enviar as requisições ao servidor. Veja o que sai na saída do
+    console da parte do servidor.
+</p>
+
+<!-- <form id="tell_time" name="tell_time" action="http://localhost:5000/tell_time" method="POST"> -->
+<!-- 	<input type="submit"> -->
+<!-- </form> -->
+
+<form id="soundboard_form" name="soundboard_form" action="http://localhost:5000/soundboard" method="POST">
+    <label for="soundboard_dropdown">Som:</label>
+    <select name="soundboard_dropdown" id="soundboard_dropdown">
+    <option value="uepa">Uepa</option>
+    <option value="rapaz">Rapaaaz</option>
+    <option value="ratinho">Ratinho</option>
+    <option value="pare">Pare!</option>
+    </select>
+	<input type="submit">
+</form><br/>
+
+<p id="soundboard_paragraph_result"></p>
+
+<label for="soundboard_uepa">UEPA</label><br/>
+<audio controls>
+    <source id="soundboard_uepa" src="http://localhost:5000/soundboard/uepa.mp3" type="audio/mpeg">
+    Deu ruim! Seu navegador não suporta elementos de áudio em HTML. O exemplo não vai funcionar!
+</audio><br/>
+
+<label for="soundboard_rapaz">RAPAAAZ</label><br/>
+<audio controls>
+    <source id="soundboard_rapaz" src="http://localhost:5000/soundboard/rapaz.mp3" type="audio/mpeg">
+    Deu ruim! Seu navegador não suporta elementos de áudio em HTML. O exemplo não vai funcionar!
+</audio><br/>
+
+<label for="soundboard_ratinho">RATINHO</label><br/>
+<audio controls>
+    <source id="soundboard_ratinho" src="http://localhost:5000/soundboard/ratinho.mp3" type="audio/mpeg">
+    Deu ruim! Seu navegador não suporta elementos de áudio em HTML. O exemplo não vai funcionar!
+</audio><br/>
+
+<label for="soundboard_pare">PARE</label><br/>
+<audio controls>
+    <source id="soundboard_pare" src="http://localhost:5000/soundboard/pare.mp3" type="audio/mpeg">
+    Deu ruim! Seu navegador não suporta elementos de áudio em HTML. O exemplo não vai funcionar!
+</audio>
+
+</body>
+<script
+	src="https://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous">
+</script>	
+<script type="text/javascript" src="main.js"></script>
+</html>

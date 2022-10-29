@@ -52,6 +52,11 @@ flowchart TD
 * **Backend:** no desenvolvimento de sites, é a parte que é executada pelo servidor. Pode ser implementada em qualquer 
   linguagem de programação e usando qualquer biblioteca. Opções populares são: PHP e Laravel; Python e Django; Javascript 
   e node.js; etc.
+* **Servidor:** a rigor, um servidor é um computador que roda uma ou mais aplicações backend, mas esse termo é usado
+  coloquialmente também para se referir à própria aplicação backend.
+* **Cliente:** a rigor, cliente se refere ao computador cliente na relação cliente-servidor, mas esse termo é usado 
+  coloquialmente também para se referir à própria aplicação frontend.
+* **Usuário:** o ser humano que está usando a aplicação frontend.
 * **Internet:** a rede de computadores interconectados. Possui diversos protocolos, como TCP/IP, HTTP, HTTPS, FTP, SSH, 
   POP, etc. Cada protocolo cumpre uma função distinta na rede.
 * **Web:** é a parte da Internet que contém páginas escritas em HTML, e portanto são legíveis à humanos.
@@ -66,6 +71,20 @@ flowchart TD
   em uma página de compras, o AJAX permite que o servidor responda qual o preço do frete, e a página Web atualize esta
   informação, sem que seja necessário recarregar toda a página.
 
+## Instalação
+
+Estas instruções são voltadas para a realização dos exercícios, mas também servem
+para qualquer código-fonte que você venha a desenvolver que use a biblioteca 
+Flask.
+
+1. Clone este repositório na sua máquina
+2. [Crie um ambiente virtual do anaconda para trabalhar](
+   https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#criando-pela-linha-de-comando)
+3. Após ter criado o ambiente virtual e o ativado, instale as bibliotecas:
+   `conda install --file requirements.txt --yes`
+4. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
+   https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
+
 ## Importante
 
 Para realizar estes exercícios, recomenda-se que você abra dois Prompts de Comando do seu Sistema Operacional,
@@ -73,20 +92,6 @@ um para rodar o código do servidor, e outro para rodar o código do cliente.
 
 Você pode rodar pelo menos um dos dois códigos na sua IDE de escolha (Pycharm, VS Code, etc), **mas não é possível rodar
 os dois códigos ao mesmo tempo na IDE**.
-
-## Requisitos
-
-É necessário ter a biblioteca `flask` instalada no seu Python. Você pode instalar tanto pelo `conda`
-
-```bash
-conda install --file requirements.txt
-```
-
-Ou pelo `pip` (caso você não esteja usando o Python Anaconda) 
-
-```bash
-pip install --requirement requirements.txt
-```
 
 ## Exercícios
 

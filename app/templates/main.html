@@ -3,9 +3,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Olá mundo!</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <title>Minha primeira aplicação Flask</title>
 </head>
 <body>
-<h1>Olá mundo!</h1>
+
+<div class="center">
+    <h1>Minha primeira aplicação Flask</h1>
+
+    <p>
+        Esta é a sua primeira aplicação Flask. Todo este site é construído de maneira que
+        seja o mais didático possível.
+    </p>
+    <p>
+        Existem duas páginas de exemplo: uma em que todo o HTML da página WEb é gerado pelo
+        servidor, e outra em que uma tabela é gerada por AJAX (o HTML está pré-renderizado,
+        e só a tabela é atualizada).
+    </p>
+    <p>
+        Clique nos botões abaixo para ver o comportamento destas duas páginas. Depois,
+        investigue o código-fonte para ver como estão implementadas.
+    </p>
+
+    <ul class="no-marker">
+        <li><a href="server_generated_page">Página gerada pelo servidor</a></li>
+        <li><a href="ajax_generated_table">Tabela gerada por AJAX</a></li>
+    </ul>
+
+</div>
 </body>
 </html>

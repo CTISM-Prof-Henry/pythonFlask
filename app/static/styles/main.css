@@ -2,7 +2,42 @@
     font-family: Verdana, sans-serif;
 }
 
+/* se aplica a todos os elementos que não foram especificados abaixo */
 .center {
     margin: auto;
     width: 50%;
+}
+
+/* se aplica apenas a títulos h1 com a classe centro */
+h1.center {
+    text-align: center;
+}
+
+/* se aplica apenas a parágrafos com a classe centro */
+p.center {
+    text-align: center;
+}
+
+/* se aplica apenas a imagens com a classe centro */
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: #8561FE;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.white-background {
+    background-color: white;
+    height: 100vh;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+li.no-marker {
+    list-style: none;
 }

@@ -30,7 +30,7 @@ def main():
         return flask.render_template(
             'server_generated_page.html',
             paragrafo='<p class="center">Este parágrafo foi renderizado pelo servidor!</p>',
-            imagem='<img class="center" src="' + flask.url_for('static', filename='images/ye_smiling.jpg') + '">'
+            imagem='<img class="center" src="' + flask.url_for('static', filename='img/ye_smiling.jpg') + '">'
         )
 
     @app.route('/ajax_generated_table', methods=['GET'])

@@ -84,6 +84,12 @@ Flask.
    `conda install --file requirements.txt --yes`
 4. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
+5. Dentro da pasta [app](app), crie uma pasta de nome `instance`. Dentro de `instance`, crie um novo arquivo, de nome
+   `config.py`, e escreva dentro dele as seguintes informações:
+
+   ```python
+   DEBUG = True
+   ```
 
 ## Importante
 
@@ -100,6 +106,7 @@ os dois códigos ao mesmo tempo na IDE**.
 
 ## Referências
 
+* [Exploring Flask](http://exploreflask.com/en/latest/) (em inglês)
 * [Métodos do protocolo HTTP - W3Schools](https://www.w3schools.com/tags/ref_httpmethods.asp) (em inglês)
 * [Métodos do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
 * [AJAX](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX)

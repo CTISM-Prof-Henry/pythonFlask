@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Tabela gerada por AJAX</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
 	crossorigin="anonymous">
 </script>
 <script type="application/javascript">
-$("#button_generate_table").on("click", function(event) {
+    $("#button_generate_table").on("click", function(event) {
     event.preventDefault(); // o usuário precisa selecionar um valor diferente do default, senão não envia a requisição
 
     $.ajax({

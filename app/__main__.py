@@ -9,8 +9,12 @@ def main():
     app = Flask(
         'Minha primeira aplicação Flask',
         template_folder='templates',
-        static_folder='static'
+        static_folder='static',
+        instance_relative_config=True
     )
+
+    app.config.from_object('config')
+    app.config.from_pyfile('config.py')
 
     # define os métodos de acesso ao backend. Perceba que estes métodos estão
     # definidos dentro do escopo da função main, e que o servidor é definido
@@ -52,7 +56,7 @@ def main():
 
     # coloca o backend a rodar no modo debug; modificações feitas nos arquivos de código-fonte
     # irão ser refletidas em tempo real nas páginas Web
-    app.run(debug=True, use_reloader=False)
+    app.run(use_reloader=app.config["USE_REALODER"])
 
 
 if __name__ == '__main__':

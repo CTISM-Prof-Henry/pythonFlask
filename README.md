@@ -81,7 +81,10 @@ Flask.
 2. [Crie um ambiente virtual do anaconda para trabalhar](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#criando-pela-linha-de-comando)
 3. Após ter criado o ambiente virtual e o ativado, instale as bibliotecas:
-   `conda install --file requirements.txt --yes`
+   ```bash
+   conda install --file conda_requirements.txt --yes
+   pip install --requirement pip_requirements.txt
+   ```
 4. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
 

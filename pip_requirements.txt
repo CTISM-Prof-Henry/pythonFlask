@@ -1,2 +1,2 @@
 flask-login==0.6.*
-bcrypt==4.0.*
+flask-bcrypt==1.0.*

@@ -79,7 +79,10 @@ Flask.
 
 1. Clone este repositório na sua máquina
 2. [Crie um ambiente virtual do anaconda para trabalhar](
-   https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#criando-pela-linha-de-comando)
+   https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#criando-pela-linha-de-comando):
+   ```bash
+   conda create --name flask --yes
+   ```
 3. Após ter criado o ambiente virtual e o ativado, instale as bibliotecas:
    ```bash
    conda install --file conda_requirements.txt --yes

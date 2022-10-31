@@ -1,3 +1,6 @@
+"""
+Arquivo que deleta o banco de dados (se ele existir) e recria as tabelas e tuplas.
+"""
 
 import sqlite3
 import os
@@ -18,6 +21,34 @@ def string_para_data(string: str) -> dt:
     """
     data = dt.strptime(string, '%Y-%m-%d')
     return data
+
+
+def query_function(query: str = None, database_path: str = None) -> list:
+    """
+    Função para fazer pesquisas no banco de dados.
+
+    :param query: A string de consulta sqlite.
+    :param database_path: Caminho do banco de dados. Caso não seja provido, irá assumir que o banco é um arquivo
+                          banco.db na pasta deste script.
+    :return: Uma lista de tuplas, onde cada tupla é uma tupla do banco de dados.
+    """
+    # pega o caminho absoluto do arquivo do banco de dados
+    # por exemplo, se o banco.db estiver na pasta C:\Users\aluno,
+    # database_path vai ser C:\Users\aluno\banco.db
+    if database_path is None:
+        database_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'banco.db')
+
+    if query is None:
+        raise ValueError('query não pode ser None!')
+
+    # se conecta ao arquivo do banco
+    with sqlite3.connect(database_path) as con:
+        # pega um cursor para executar as operações
+        # um cursor é uma conexão para o banco de dados (e.g. cria, deleta, insere, etc)
+        cur = con.cursor()
+
+        answer = cur.execute(query).fetchall()
+        return answer
 
 
 def cria_tabelas(cur: sqlite3.Cursor) -> sqlite3.Cursor:
@@ -104,6 +135,8 @@ def insere_tuplas(cur: sqlite3.Cursor) -> sqlite3.Cursor:
 
 
 def main(database_path: str = None):
+    print('---------- rotina do banco de dados ----------')
+
     # pega o caminho absoluto do arquivo do banco de dados
     # por exemplo, se o banco.db estiver na pasta C:\Users\aluno,
     # database_path vai ser C:\Users\aluno\banco.db
@@ -134,6 +167,8 @@ def main(database_path: str = None):
         # salva as modificações feitas no banco
         con.commit()
         print('banco de dados salvo!')
+
+    print('---------- rotina do banco de dados ----------')
 
 
 if __name__ == '__main__':

@@ -23,13 +23,13 @@ repositório.
 
 ```mermaid
 flowchart TD
+    user["usuário"]
+    controller["controller"]
     model["model"]
     view["view"]
-    controller["controller"]
-    user["usuário"]
-
-    view -- "visualiza" --> user
+    
     user -- "utiliza" --> controller
+    view -- "visualiza" --> user
 
     controller -- "manipula" --> model
     model -- "atualiza" --> view
@@ -37,6 +37,15 @@ flowchart TD
 
 ## Sumário
 
+<!-- TOC -->
+* [Índice de termos](#índice-de-termos)
+* [Instalação](#instalação)
+* [Importante](#importante)
+* [Exercícios](#exercícios)
+* [Referências](#referências)
+  * [Frontend](#frontend)
+  * [Backend](#backend)
+<!-- TOC -->
 
 ## Índice de termos
 
@@ -83,18 +92,27 @@ Flask.
    ```bash
    conda create --name flask --yes
    ```
-3. Após ter criado o ambiente virtual e o ativado, instale as bibliotecas:
+3. Ative-o:
+   ```bash
+   conda activate flask
+   ```
+4. Instale as bibliotecas:
    ```bash
    conda install --file conda_requirements.txt --yes
    pip install --requirement pip_requirements.txt
    ```
-4. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
+5. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
-5. Dentro da pasta [app](app), crie uma pasta de nome `instance`. Dentro de `instance`, crie um novo arquivo, de nome
+6. Dentro da pasta [app](app), crie uma pasta de nome `instance`. Dentro de `instance`, crie um novo arquivo, de nome
    `config.py`, e escreva dentro dele as seguintes informações:
 
    ```python
    DEBUG = True
+   ```
+7. Para executar o código-fonte, rode o arquivo `__main__.py` dentro da pasta `app`, ou então digite na linha de comando
+
+   ```bash
+   python app
    ```
 
 ## Importante
@@ -112,16 +130,23 @@ os dois códigos ao mesmo tempo na IDE**.
 
 ## Referências
 
-* [Exploring Flask](http://exploreflask.com/en/latest/) (em inglês)
-* [Métodos do protocolo HTTP - W3Schools](https://www.w3schools.com/tags/ref_httpmethods.asp) (em inglês)
-* [Métodos do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
-* [AJAX](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX)
-* [REST API](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
-* [Slides - REST, SOAP, Web API](slides/slides.html)
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/) (em inglês)
+Abaixo são disponibilizados diversos recursos para desenvolvimento Web.
+
+### Frontend
+
 * [Boostrap](https://getbootstrap.com/) (em inglês)
 * [Google Fonts](https://fonts.google.com/knowledge) (em inglês)
   * [Lista de fontes](https://fonts.google.com/) (em inglês)
 * [Viz Palette](https://projects.susielu.com/viz-palette) (em inglês)
 * [Coolors](https://coolors.co/) (em inglês)
 * [Pixlr E](https://pixlr.com/br/e/)
+
+### Backend
+
+* [REST API](https://www.redhat.com/pt-br/topics/api/what-is-a-rest-api)
+* [Métodos do protocolo HTTP - W3Schools](https://www.w3schools.com/tags/ref_httpmethods.asp) (em inglês)
+* [Métodos do protocolo HTTP - MDN](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods)
+* [AJAX](https://developer.mozilla.org/pt-BR/docs/Web/Guide/AJAX)
+* [Slides - REST, SOAP, Web API](slides/slides.html)
+* [Exploring Flask](http://exploreflask.com/en/latest/) (em inglês)
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/) (em inglês)

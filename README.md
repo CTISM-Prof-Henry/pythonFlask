@@ -1,5 +1,20 @@
 # pythonFlask
 
+## Sumário
+
+<!-- TOC -->
+* [Introdução](#introdução)
+* [Índice de termos](#índice-de-termos)
+* [Instalação](#instalação)
+* [Importante](#importante)
+* [Exercícios](#exercícios)
+* [Referências](#referências)
+  * [Frontend](#frontend)
+  * [Backend](#backend)
+<!-- TOC -->
+
+## Introdução
+
 Flask é uma biblioteca em Python que implementa um micro-controlador, no sentido do modelo de desenvolvimento de Software 
 [Model-View-Controller](https://pt.wikipedia.org/wiki/MVC). O objetivo de Flask é implementar pequenos servidores, com  
 poucas requisições de tráfego, para projetos pequenos. Por ser um micro-controlador, Flask não é uma das bibliotecas
@@ -34,18 +49,6 @@ flowchart TD
     controller -- "manipula" --> model
     model -- "atualiza" --> view
 ```
-
-## Sumário
-
-<!-- TOC -->
-* [Índice de termos](#índice-de-termos)
-* [Instalação](#instalação)
-* [Importante](#importante)
-* [Exercícios](#exercícios)
-* [Referências](#referências)
-  * [Frontend](#frontend)
-  * [Backend](#backend)
-<!-- TOC -->
 
 ## Índice de termos
 

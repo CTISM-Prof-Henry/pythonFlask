@@ -79,6 +79,7 @@ Flask.
    ```python
    DEBUG = True  
    USE_REALODER = False
+   GENERATE_DB = True
    ```
 7. Para executar o código-fonte, rode o arquivo `__main__.py` dentro da pasta `app`, ou então digite na linha de comando
 

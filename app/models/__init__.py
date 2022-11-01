@@ -54,6 +54,7 @@ def query_function(query: str = None, database_path: str = None) -> list:
 def cria_tabelas(cur: sqlite3.Cursor) -> sqlite3.Cursor:
     """
     Cria as tabelas do banco de dados.
+
     :param cur: um cursor para o banco de dados.
     :return: um cursor para o banco de dados.
     """
@@ -94,7 +95,8 @@ def cria_tabelas(cur: sqlite3.Cursor) -> sqlite3.Cursor:
 
 def insere_tuplas(cur: sqlite3.Cursor) -> sqlite3.Cursor:
     """
-    Cria as tabelas do banco de dados.
+    Insere tuplas no banco de dados.
+
     :param cur: um cursor para o banco de dados.
     :return: um cursor para o banco de dados.
     """

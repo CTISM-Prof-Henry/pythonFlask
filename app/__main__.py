@@ -14,6 +14,7 @@ except ModuleNotFoundError:
         folder = os.path.join('..', 'app')
     else:
         folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
+        os.chdir(os.path.join(folder, 'app'))
         folder = os.path.join(folder, 'app', 'instance')
     from models import main as database_routine, query_function
     from views import main as view_func

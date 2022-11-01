@@ -23,12 +23,12 @@ def main():
         static_folder='static',
         instance_relative_config=True
     )
-    print(folder)
+
     app.config.from_object('config')
     app.config.from_pyfile(os.path.join(folder, 'config.py'))
 
-    app = view_func(app)
-    app = queries_ajax_func(app)
+    app = view_func(app)  # carrega views no app
+    app = queries_ajax_func(app)  # carrega as consultas ao banco no app
 
     # coloca o backend a rodar no modo debug; modificações feitas nos arquivos de código-fonte
     # irão ser refletidas em tempo real nas páginas Web

@@ -10,7 +10,11 @@ try:
     from app.models.queries_ajax import main as queries_ajax_func
 except ModuleNotFoundError:
     # esse bloco de código roda se o código for executado pela linha de comando
-    folder = os.path.join('..', 'app')
+    if os.name == 'nt':
+        folder = os.path.join('..', 'app')
+    else:
+        folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
+        folder = os.path.join(folder, 'app', 'instance')
     from models import main as database_routine, query_function
     from views import main as view_func
     from models.queries_ajax import main as queries_ajax_func

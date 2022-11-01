@@ -4,8 +4,9 @@
 
 <!-- TOC -->
 * [Introdução](#introdução)
-* [Índice de termos](#índice-de-termos)
 * [Instalação](#instalação)
+* [Índice de termos](#índice-de-termos)
+* [Estrutura de um projeto Flask](#estrutura-de-um-projeto-flask)
 * [Exercícios](#exercícios)
 * [Referências](#referências)
   * [Frontend](#frontend)

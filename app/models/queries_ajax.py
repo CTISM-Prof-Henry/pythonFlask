@@ -25,7 +25,7 @@ def main(app: flask.app.Flask) -> flask.app.Flask:
             new_answer.append({k: v for k, v in zip(table_columns, line)})
         # monta a resposta
         response = jsonify(new_answer)
-        response.headers.add('Access-Control-Allow-Origin', '*')  # essa linha é necessária. requisição dos navegadores
+        response.headers.add('Access-Control-Allow-Origin', '*')  # Essa linha é necessária. Requisição dos navegadores
         return response  # retorna resposta para a página Web
 
     return app

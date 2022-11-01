@@ -1,3 +1,9 @@
+"""
+Arquivo com definições de roteamento para a aplicação.
+
+É uma boa prática de programação colocar o mesmo nome do roteamento, da função e do arquivo HTML.
+"""
+
 import flask
 
 
@@ -6,7 +12,6 @@ def main(app: flask.app.Flask) -> flask.app.Flask:
     def initial_page():
         return flask.render_template('main.html')
 
-    # @app.route('/server_generated_page', methods=['POST'])
     @app.route('/server_generated_page', methods=['GET'])
     def server_generated_page():
         return flask.render_template(

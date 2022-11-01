@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,6 +23,7 @@
         <option value="professores_para_materias">Professores para Matérias</option>
     </select>
     <button id="button_generate_table">Clique aqui!</button>
+    <button id="alerta" onclick="alerta_vermelho()">Alerta</button>
 
     <table id="answer_table">
     </table>
@@ -34,6 +35,9 @@
 	src="https://code.jquery.com/jquery-3.3.1.min.js"
 	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous">
+</script>
+<script type="application/javascript" src="{{ url_for('static', filename='js/main.js') }}">
+
 </script>
 <!-- código AJAX -->
 <script type="application/javascript">
@@ -47,6 +51,7 @@
         // essa variável tem o mesmo valor do elemento HTML select_tables (definido ali em cima no código)
         data: {opcao_selecionada: $("#select_tables").val()},
         success: function(responseData) {
+            // função que constrói uma tabela, usando código Javascript, baseado em um dicionário enviado pelo servidor
             let res = JSON.stringify(responseData);
             console.log('o servidor respondeu o seguinte: ');
             console.log(res);
@@ -73,6 +78,7 @@
 					td.appendChild(document.createTextNode(response[i][key]));
 				}
 			}
+            // define que o código HTML do elemento answer_table é o definido por essa função
 			$('#answer_table').html(table);
         }
     });

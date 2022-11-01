@@ -11,9 +11,9 @@ try:
     from app.models.queries_ajax import main as queries_ajax_func
 except ModuleNotFoundError:
     # esse bloco de código roda se o código for executado pela linha de comando
-    if os.name == 'nt':
+    if os.name == 'nt':  # se o sistema operacional for Windows
         folder = os.path.join('..', 'app', 'config.py')
-    else:
+    else:  # senão, é Linux ou Mac
         folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
         os.chdir(os.path.join(folder, 'app'))
         folder = os.path.join(folder, 'app', 'instance', 'config.py')
@@ -37,8 +37,9 @@ def main():
         app.config.from_pyfile(folder)
     except FileNotFoundError:
         print('--' * 55, file=sys.stderr)
-        print(' O arquivo app/instance/config.py não foi encontrado, '
-              'então o arquivo app/config.py será usado no seu lugar.',
+        print(
+            ' O arquivo app/instance/config.py não foi encontrado, '
+            'então o arquivo app/config.py será usado no seu lugar.',
             file=sys.stderr
         )
         print('--' * 55, file=sys.stderr)

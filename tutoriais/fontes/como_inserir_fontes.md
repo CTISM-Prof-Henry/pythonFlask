@@ -5,47 +5,22 @@ passo-a-passo:
 
 1. Ache uma fonte que você gosta. Neste tutorial, usaremos a fonte 
    [Kolker Brush](https://fonts.google.com/specimen/Kolker+Brush) como exemplo.
-2. A URL desta fonte no Google Fonts é 
-   ```
-   https://fonts.google.com/specimen/Kolker+Brush
-   ```
-   Trocando-a para o formato da API do Google Fonts, a URL da fonte ficará
-   ```
-   https://fonts.googleapis.com/css?family=Kolker+Brush
-   ```
+2. Encontre o estilo da fonte que você deseja usar, e clique no botão `select`:
    
-   > O site do Google Fonts (https://fonts.google.com/) é uma **página Web**, feita para ser lida por seres humanos. A 
-   > **API** do Google Fonts (https://fonts.googleapis.com/css), por outro lado, é feita para que aplicações (como 
-   > programas e robôs) acessem-na. Como 1) queremos inserir a fonte no nosso site, 2) o site precisa baixar a fonte do 
-   > servidor do Google, e 3) o nosso site não é um ser humano, usamos a API do Google ao invés do site da Web.
+   ![font_1.png](font_1.png)
 
-3. No arquivo HTML que queremos adicionar a fonte, iremos adicionar uma nova tag `link` dentro do `head`:
+3. No menu lateral à direita que se abrir, encontre a seção `Use on the Web`, e selecione a opção `@import`:
 
-```html
-<html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <link rel="https://fonts.googleapis.com/css?family=Kolker+Brush">
-    <title>Olá mundo!</title>
-    <style>
-        * {
-            font-family: "Kolker Brush", sans-serif;
-        }
-    </style>
-</head>
-<body>
-<h1>Olá mundo!</h1>
+   ![font_2.png](font_2.png)
 
-<p>
-    Esta página usa a fonte <a href="https://fonts.google.com/specimen/Kolker+Brush">Kolker Brush</a> 
-    do <a href="https://fonts.google.com/">Google Fonts.</a>
-</p>
-</body>
-</html>
-```
+4. Copie o código fonte e cole no arquivo CSS (se você estiver usando CSS externo), ou dentro das tags `style` (se você
+   estiver usando CSS interno ou inline)
+5. Dentro do arquivo CSS (ou das tags `style`), copie-e-cole a especificação do estilo da fonte que você usará:
 
-Você pode consultar a diferença entre um arquivo [sem fonte do Google Fonts](sem_fonte.html) e outro 
-[com fonte](com_fonte.html).
+   ![font_3.png](font_3.png)
 
-> Neste tutorial, o CSS está sendo definido internamente. Mas você pode definí-lo 
-> [inline ou externamente](https://www.w3schools.com/css/css_howto.asp) também.
+6. Se tudo der certo, a nova fonte deve aparecer quando você salvar o arquivo e atualizar a página no navegador.
+7. Você pode consultar a diferença entre um arquivo [sem fonte](sem_fonte.html) do Google Fonts e outro 
+[com fonte](com_fonte.html). O arquivo CSS é definido no arquivo [main.css](main.css).
+   * Neste tutorial o CSS está definido internamente. Mas você pode definí-lo 
+     [internamente ou inline](https://www.w3schools.com/css/css_howto.asp) também.

@@ -14,7 +14,14 @@ passo-a-passo:
    ![font_2.png](font_2.png)
 
 4. Copie o código fonte e cole no arquivo CSS (se você estiver usando CSS externo), ou dentro das tags `style` (se você
-   estiver usando CSS interno ou inline)
+   estiver usando CSS interno ou inline):
+   
+   ```css
+   @import url('https://fonts.googleapis.com/css2?family=Kolker+Brush&display=swap');
+   ```
+
+   > Não copie as tags `<style>` se você estiver usando CSS externo!
+
 5. Dentro do arquivo CSS (ou das tags `style`), copie-e-cole a especificação do estilo da fonte que você usará:
 
    ![font_3.png](font_3.png)

@@ -195,6 +195,7 @@ Abaixo são disponibilizados diversos recursos para desenvolvimento Web.
 * [Boostrap](https://getbootstrap.com/) (em inglês)
 * [Google Fonts](https://fonts.google.com/knowledge) (em inglês)
   * [Lista de fontes](https://fonts.google.com/) (em inglês)
+  * [Como inserir fontes](tutoriais/fontes/como_inserir_fontes.md)
 * [Viz Palette](https://projects.susielu.com/viz-palette) (em inglês)
 * [Coolors](https://coolors.co/) (em inglês)
 * [Pixlr E](https://pixlr.com/br/e/)

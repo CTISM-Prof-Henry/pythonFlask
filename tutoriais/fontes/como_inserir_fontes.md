@@ -29,5 +29,5 @@ passo-a-passo:
 6. Se tudo der certo, a nova fonte deve aparecer quando você salvar o arquivo e atualizar a página no navegador.
 7. Você pode consultar a diferença entre um arquivo [sem fonte](sem_fonte.html) do Google Fonts e outro 
 [com fonte](com_fonte.html). O arquivo CSS é definido no arquivo [main.css](main.css).
-   * Neste tutorial o CSS está definido internamente. Mas você pode definí-lo 
+   * Neste tutorial o CSS está definido externamente. Mas você pode definí-lo 
      [internamente ou inline](https://www.w3schools.com/css/css_howto.asp) também.

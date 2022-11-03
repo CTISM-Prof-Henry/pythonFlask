@@ -130,9 +130,18 @@ Flask.
 
 ### Termos da biblioteca Flask
 
-* **template:** uma página HTML que será manipulada pelo backend para mostrar informações customizadas.
+* **template:** um arquivo HTML que será manipulado pelo backend para mostrar informações customizadas.
+* **página:** o que vemos quando acessamos uma URL. Geralmente é um arquivo HTML customizado pelo servidor através de 
+  uma rota.
+  * **página estática:** todas as informações que são mostradas na página estão escritas no arquivo HTML. Nenhuma 
+    informação é atualizada pelo servidor.
+  * **página dinâmica:** uma ou mais informações da página são atualizadas pelo servidor. Pense nas páginas da Wikipedia:
+    elas são dinâmicas. o template da página é o mesmo para todas, mas as informações mudam de acordo com o verbete 
+    pesquisado.
 * **route (rota):** uma função Python que determina o que deve acontecer quando o usuário digita uma URL no navegador.
-  Geralmente, uma rota carrega um template e atualiza as informações da página.
+  Geralmente, uma rota carrega um template, insere informações customizadas, e retorna para o navegador no formato de uma
+  página da Web.
+
 
 ## Estrutura de um projeto Flask
 
@@ -145,7 +154,7 @@ app/
         config.py
     models/
         __init__.py
-        banco.db
+        test.db
         queries_ajax.py
     static/
         css/

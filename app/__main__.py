@@ -6,9 +6,9 @@ from flask import Flask
 try:
     # esse bloco de código roda se o código for executado pelo Pycharm
     folder = 'config.py'
-    from app.models import main as database_routine, query_function
-    from app.views import main as view_func
-    from app.models.queries_ajax import main as queries_ajax_func
+    from app.static.database import main as database_routine
+    from app.models import query_function, main as models_func
+    from app.views import main as views_func
 except ModuleNotFoundError:
     # esse bloco de código roda se o código for executado pela linha de comando
     if os.name == 'nt':  # se o sistema operacional for Windows
@@ -17,9 +17,9 @@ except ModuleNotFoundError:
         folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
         os.chdir(os.path.join(folder, 'app'))
         folder = os.path.join(folder, 'app', 'instance', 'config.py')
-    from models import main as database_routine, query_function
-    from views import main as view_func
-    from models.queries_ajax import main as queries_ajax_func
+    from static.database import main as database_routine
+    from models import query_function, main as models_func
+    from views import main as views_func
 
 
 def main():
@@ -50,8 +50,8 @@ def main():
     if app.config["GENERATE_DB"]:
         database_routine()
 
-    app = view_func(app)  # carrega as definições de roteamento na aplicação
-    app = queries_ajax_func(app)  # carrega as definições de funções ajax na aplicação
+    app = views_func(app)  # carrega as definições de roteamento na aplicação
+    app = models_func(app)  # carrega as definições de funções ajax na aplicação
 
     # coloca o backend a rodar no modo debug; modificações feitas nos arquivos de código-fonte
     # se refletirão em tempo real nas páginas Web (basta dar um F5 no navegador)

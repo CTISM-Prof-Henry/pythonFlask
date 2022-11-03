@@ -30,7 +30,6 @@ def main():
         static_folder='static',
         instance_relative_config=True
     )
-
     # configura os arquivos de definições, app/config.py e app/instance/config.py
     app.config.from_object('config')
     try:

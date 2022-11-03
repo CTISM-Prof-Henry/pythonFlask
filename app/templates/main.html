@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- para o frontend, faça assim -->
+    <link rel="shortcut icon" href="../static/img/favicon.ico">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <!-- para o backend, faça assim -->
     <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <title>Minha primeira aplicação Flask</title>
@@ -30,7 +34,6 @@
         <li class="no-marker"><a href="server_generated_page">Página gerada pelo servidor</a></li>
         <li class="no-marker"><a href="ajax_generated_table">Tabela gerada por AJAX</a></li>
     </ul>
-
 </div>
 </body>
 </html>

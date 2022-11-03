@@ -50,8 +50,8 @@ def main():
     if app.config["GENERATE_DB"]:
         database_routine()
 
-    app = views_func(app)  # carrega as definições de roteamento na aplicação
     app = models_func(app)  # carrega as definições de funções ajax na aplicação
+    app = views_func(app)  # carrega as definições de roteamento na aplicação
 
     # coloca o backend a rodar no modo debug; modificações feitas nos arquivos de código-fonte
     # se refletirão em tempo real nas páginas Web (basta dar um F5 no navegador)

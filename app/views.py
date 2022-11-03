@@ -16,6 +16,7 @@ except ModuleNotFoundError:
 
 
 def main(app: flask.app.Flask) -> flask.app.Flask:
+
     @app.route('/')
     def initial_page():
         try:

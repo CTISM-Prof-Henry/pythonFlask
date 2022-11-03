@@ -36,7 +36,7 @@ def query_function(query: str = None, database_path: str = None) -> list:
     # por exemplo, se o test.db estiver na pasta C:\Users\aluno,
     # database_path vai ser C:\Users\aluno\test.db
     if database_path is None:
-        database_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', 'static', 'database', 'test.db')
+        database_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'static', 'database', 'test.db')
 
     if query is None:
         raise ValueError('query não pode ser None!')

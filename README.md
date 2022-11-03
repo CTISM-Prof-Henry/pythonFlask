@@ -77,10 +77,16 @@ Flask.
    `config.py`, e escreva dentro dele as seguintes informações:
 
    ```python
-   DEBUG = True  
-   USE_REALODER = False
-   GENERATE_DB = True
+   # arquivo com definições de execução quando o backend estiver em produção
+   DEBUG = True  # roda o debugger na versão de produção
+   USE_REALODER = True  # recarrega código-fonte quando ele for modificado 
+   GENERATE_DB = True  # re-gera o banco de dados novamente a cada vez que o aplicativo começar a executar
    ```
+
+   > Existe um arquivo [app/config.py](app/config.py) com definições para quando o backend estiver em produção (ou seja,
+   > pronto para comercializado). No arquivo [app/instance/config.py](app/instance/config.py), colocamos as definições
+   > para quando o backend estiver em etapa de desenvolvimento.
+
 7. Para executar o código-fonte, rode o arquivo `__main__.py` dentro da pasta `app`, ou então digite na linha de comando
 
    ```bash
@@ -88,6 +94,8 @@ Flask.
    ```
 
 ## Índice de termos
+
+### Termos gerais
 
 * **Model-View-Controller (ou MVC):** modelo de desenvolvimento de Software. Pode ser 
   aplicado a qualquer software compatível com esse modelo de desenvolvimento, como por exemplo sites e aplicativos para 
@@ -119,6 +127,12 @@ Flask.
   atualizada de forma assíncrona sem interferir na exibição do conteúdo. Por exemplo, quando um usuário insere seu CEP
   em uma página de compras, o AJAX permite que o servidor responda qual o preço do frete, e a página Web atualize esta
   informação, sem que seja necessário recarregar toda a página.
+
+### Termos da biblioteca Flask
+
+* **template:** uma página HTML que será manipulada pelo backend para mostrar informações customizadas.
+* **route (rota):** uma função Python que determina o que deve acontecer quando o usuário digita uma URL no navegador.
+  Geralmente, uma rota carrega um template e atualiza as informações da página.
 
 ## Estrutura de um projeto Flask
 

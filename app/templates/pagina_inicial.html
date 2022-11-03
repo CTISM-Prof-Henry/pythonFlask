@@ -31,8 +31,15 @@
     </p>
 
     <ul class="no-marker">
+        <!-- nota: os links abaixo só funcionarão quando o backend estiver funcionando, pois eles referenciam ROTAS,
+             e não páginas HTML! -->
         <li class="no-marker"><a href="server_generated_page">Página gerada pelo servidor</a></li>
         <li class="no-marker"><a href="ajax_generated_table">Tabela gerada por AJAX</a></li>
+        <!-- começo do trecho de código gerado pelo servidor -->
+        {% autoescape false %}
+        {{ lista_materias }}
+        {% endautoescape %}
+        <!-- fim do trecho de código gerado pelo servidor -->
     </ul>
 </div>
 </body>

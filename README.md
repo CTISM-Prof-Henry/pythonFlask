@@ -150,12 +150,12 @@ representa:
 
 ```
 app/
-    instance/
-        config.py
-    models/
+    models.py
+    views.py
+    database/
         __init__.py
-        test.db
-        queries_ajax.py
+    __init__.py
+    __main__.py 
     static/
         css/
             main.css
@@ -168,11 +168,9 @@ app/
         ajax_generated_table.html
         main.html
         server_generated_page.html
-    views/
-        __init__.py
-    __init__.py
-    __main__.py
-    config.py 
+    config.py
+    instance/
+        config.py
 ```
 
 * `app`: a pasta da aplicação Flask. Contém todas as informações necessárias para colocar a aplicação para rodar.
@@ -184,17 +182,21 @@ app/
   do site, ou outras informações sensíveis que são usadas durante o desenvolvimento).
 * `app/config.py`: um arquivo de configuração que, ao contrário de `instance/config.py`, pode ser compartilhado com 
   outros desenvolvedores do projeto.
-* `models`: Esta pasta contém um arquivo para deletar a antiga versão do banco de dados (`__init__.py`), e um arquivo com
-  funções que manipulam o banco de dados, e são usadas pelo aplicativo (`queries_ajax.py`).
-* `views`: Contém um arquivo (`__init__.py`) que contém as rotas do aplicativo (por exemplo, qual rota o site deve seguir 
-  se o usuário clicar em um link). Na prática, este arquivo carrega os `templates` e os envia de volta para o cliente.
+* `models.py`: Colocamos neste arquivo os métodos do aplicativo que irão manipular o banco de dados. As requisições são 
+  transmitidas através do método POST do HTTP.
+* `views.py`: Arquivo que contém as rotas para as páginas da Web do aplicativo (por exemplo, qual rota o site deve seguir 
+  se o usuário clicar em um link). Cada método deste arquivo, na prática, carrega um template da pasta `templates`, 
+  atualiza as informações (se a página for dinâmica) e os envia de volta para o cliente. Os dados são transmitidos através 
+  do método `GET` do HTTP.
 * `static`: Pasta que contém objetos que não serão modificados durante a execução do aplicativo (por isso são estáticas).
   Por exemplo, o arquivo com o estilo do site (`css/main.css`) não será alterado durante a utilização do site; da mesma 
   maneira isto ocorre com as imagens `img/favicon.ico` e `img/ye_smilling.jpg`, e com os scripts Javascript (`js/main.js`).
   Podemos criar arquivos também para definir scripts AJAX, mas não é estritamente necessário.
-* `templates`: Uma pasta com páginas HTML que, ao contrário da pasta static, serão modificadas pela aplicação. Pense por 
-  exemplo na Wikipedia: existe uma página HTML que é um template para todas as páginas da Wikipedia. Resta ao site da 
-  Wikipedia apenas recuperar as informações do banco de dados e preencher no template.
+* `static/database`: Pacote Python com um arquivo (`__init__.py`) para criação de tabelas e inserção de tuplas do banco 
+  de dados usado pela aplicação.
+* `templates`: Uma pasta com páginas HTML que, ao contrário da pasta `static`, serão modificadas pela aplicação. Pense 
+  por exemplo na Wikipedia: existe uma página HTML que é um template para todas as páginas da Wikipedia. Resta ao site 
+  da Wikipedia apenas recuperar as informações do banco de dados e preencher no template.
 
 Esta seção foi baseada [neste site](http://exploreflask.com/en/latest/organizing.html).
 

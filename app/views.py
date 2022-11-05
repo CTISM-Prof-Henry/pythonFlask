@@ -28,7 +28,19 @@ def main(app: flask.app.Flask) -> flask.app.Flask:
                 rota = 'materias/{0}'.format(id_materia)
                 texto_lista_materias += '<li class="no-marker"><a href="{0}">{1}</a></li>\n'.format(rota, nome_materia)
 
-            return flask.render_template('pagina_inicial.html', lista_materias=texto_lista_materias)
+            shia = '''
+            <div class="center">
+            <h2 class="center" style="width:100%">Shia está pistolaço com você >:(</h1>
+            <br/>
+            <iframe src="https://www.youtube.com/embed/Alt0SKEL84M"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen style="width: 100%;resize: horizontal;aspect-ratio: 16 / 9;">
+            </iframe>
+            </div>
+            '''
+
+            return flask.render_template('pagina_inicial.html', lista_materias=texto_lista_materias, shia=shia)
         except Exception:
             return flask.render_template(
                 '404.html'

@@ -11,12 +11,10 @@ try:
     from app.views import main as views_func
 except ModuleNotFoundError:
     # esse bloco de código roda se o código for executado pela linha de comando
-    if os.name == 'nt':  # se o sistema operacional for Windows
-        folder = os.path.join('..', 'app', 'config.py')
-    else:  # senão, é Linux ou Mac
-        folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
-        os.chdir(os.path.join(folder, 'app'))
-        folder = os.path.join(folder, 'app', 'instance', 'config.py')
+    folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
+    os.chdir(os.path.join(folder, 'app'))
+    folder = os.path.join(folder, 'app', 'config.py')
+
     from static.database import main as database_routine
     from models import query_function, main as models_func
     from views import main as views_func

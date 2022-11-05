@@ -38,7 +38,7 @@ def main(database_path: str = None, script_sql_path: str = None):
         # um cursor é uma conexão para o banco de dados (e.g. cria, deleta, insere, etc)
         cur = con.cursor()
 
-        with open(script_sql_path, 'r') as script_sql:
+        with open(script_sql_path, 'r', encoding='utf-8') as script_sql:
             lines = '\n'.join(script_sql.readlines())
             cur.executescript(lines)
 

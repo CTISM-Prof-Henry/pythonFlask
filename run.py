@@ -23,7 +23,7 @@ def main():
     )
     sys.path.append(os.path.join(current_path, 'app'))
     # configura os arquivos de definições, app/config.py e app/instance/config.py
-    app.config.from_object('config')  # TODO fix it!
+    app.config.from_object('config')
     try:
         app.config.from_pyfile('config.py')
     except FileNotFoundError:

@@ -82,7 +82,7 @@ Flask.
    ```python
    # arquivo com definições de execução quando o backend estiver em produção
    DEBUG = True  # roda o debugger na versão de produção
-   USE_REALODER = False  # recarrega código-fonte quando ele for modificado -- só funciona no Pycharm! 
+   USE_REALODER = True  # atualiza automaticamente o site quando o código-fonte for modificado 
    GENERATE_DB = True  # re-gera o banco de dados novamente a cada vez que o aplicativo começar a executar
    ```
 
@@ -90,10 +90,10 @@ Flask.
    > pronto para comercializado). No arquivo [app/instance/config.py](app/instance/config.py), colocamos as definições
    > para quando o backend estiver em etapa de desenvolvimento.
 
-7. Para executar o código-fonte, rode o arquivo `__main__.py` dentro da pasta `app`, ou então digite na linha de comando
+7. Para executar o código-fonte, rode o script `run.py` pelo Pycharm, ou então digite na linha de comando
 
    ```bash
-   python app
+   python run.py
    ```
 
 ## Índice de termos

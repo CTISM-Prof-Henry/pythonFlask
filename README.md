@@ -69,8 +69,11 @@ Flask.
 4. Instale as bibliotecas:
    ```bash
    conda install --file conda_requirements.txt --yes
-   pip install --requirement pip_requirements.txt
    ```
+   ```bash
+   pip install --requirement pip_requirements.txt
+   ```   
+
 5. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
 6. Dentro da pasta [app](app), crie uma pasta de nome `instance`. Dentro de `instance`, crie um novo arquivo, de nome
@@ -79,7 +82,7 @@ Flask.
    ```python
    # arquivo com definições de execução quando o backend estiver em produção
    DEBUG = True  # roda o debugger na versão de produção
-   USE_REALODER = True  # recarrega código-fonte quando ele for modificado 
+   USE_REALODER = False  # recarrega código-fonte quando ele for modificado -- só funciona no Pycharm! 
    GENERATE_DB = True  # re-gera o banco de dados novamente a cada vez que o aplicativo começar a executar
    ```
 

@@ -3,18 +3,17 @@ import sys
 
 from flask import Flask
 
+folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
+os.chdir(os.path.join(folder, 'app'))
+sys.path.append(os.path.join(folder, 'app'))
+
 try:
     # esse bloco de código roda se o código for executado pelo Pycharm
-    folder = 'config.py'
     from app.static.database import main as database_routine
-    from app.models import query_function, main as models_func
+    from app.models import main as models_func
     from app.views import main as views_func
 except ModuleNotFoundError:
     # esse bloco de código roda se o código for executado pela linha de comando
-    folder = os.sep.join(os.path.dirname(os.path.abspath(__file__)).split(os.sep)[:-1])
-    os.chdir(os.path.join(folder, 'app'))
-    folder = os.path.join(folder, 'app', 'config.py')
-
     from static.database import main as database_routine
     from models import query_function, main as models_func
     from views import main as views_func
@@ -31,7 +30,7 @@ def main():
     # configura os arquivos de definições, app/config.py e app/instance/config.py
     app.config.from_object('config')
     try:
-        app.config.from_pyfile(folder)
+        app.config.from_pyfile('config.py')
     except FileNotFoundError:
         print('--' * 55, file=sys.stderr)
         print(

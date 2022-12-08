@@ -74,7 +74,7 @@ Flask.
    pip install --requirement pip_requirements.txt
    ```   
 
-5. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm.](
+5. Para executar os códigos-fontes, [abra a pasta deste repositório no Pycharm, e configure o ambiente virtual.](
    https://github.com/CTISM-Prof-Henry/pythonEssentials/blob/main/chapters/venvs.md#usando-pelo-pycharm)
 6. Dentro da pasta [app](app), crie uma pasta de nome `instance`. Dentro de `instance`, crie um novo arquivo, de nome
    `config.py`, e escreva dentro dele as seguintes informações:

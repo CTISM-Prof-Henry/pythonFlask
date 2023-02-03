@@ -47,7 +47,7 @@ def main():
 
     # coloca o backend a rodar no modo debug; modificações feitas nos arquivos de código-fonte
     # se refletirão em tempo real nas páginas Web (basta dar um F5 no navegador)
-    app.run(use_reloader=app.config["USE_REALODER"])
+    app.run(use_reloader=app.config["USE_RELOADER"])
 
 
 if __name__ == '__main__':

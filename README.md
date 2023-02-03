@@ -82,7 +82,7 @@ Flask.
    ```python
    # arquivo com definições de execução quando o backend estiver em produção
    DEBUG = True  # roda o debugger na versão de produção
-   USE_REALODER = True  # atualiza automaticamente o site quando o código-fonte for modificado 
+   USE_RELOADER = True  # atualiza automaticamente o site quando o código-fonte for modificado 
    GENERATE_DB = True  # re-gera o banco de dados novamente a cada vez que o aplicativo começar a executar
    ```
 
